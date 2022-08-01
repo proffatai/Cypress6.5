@@ -1,0 +1,26 @@
+We create our tests inside the integration folder. You can delete the examples folder.
+
+If we add any external plugins, we can store them inside the plugins folder.
+
+Steps to commence tests on cypress
+
+1. Create a js file inside the integration folder
+2. ///<refrence types="cypress" />  #write this line of code on line 1 of the js file you just created
+
+Line 1 tells the IDE to allow autocompletion from the cypress library.
+
+To write a test in cypress, we need a test runner called mocha which comes built-in with cypress. Example it()
+
+cy is an object of cypress. We can access all cypress attributes and methods via the cy command.
+
+After writing your scripts, to run your test, run the command `npx cypress open`
+
+Note: Whenever we make any changes to the script and save the file. Those changes get reflected immediately on the cypress app. We can add some delays to the time it takes to reflect the changes made on the source code. Just proceed to Cypress.json file and set "watchForFileChanges" to be false.Then we will need to always manually refresh the page before we can see the file changes
+
+## How to access specific element on the AUT
+Locate and click on the Open selector playground icon. This highlights the whole app
+Click on any element on the web app, a cypress command is provided
+Then copy the command and paste inside ur .js file and run it
+
+
+## How to access elements under a Cypress test
