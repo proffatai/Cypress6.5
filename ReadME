@@ -40,3 +40,11 @@ NB: timeout is simply the time taken for cypress to wait for a response from an 
 ## Searching and clicking on a specific text on the AUT
 cy.contains('textName') // this will focus on any where there is textName on the AUT, then we can append .click() to click such text.
 We could also use the cy.get() to access the text. Just that we would have to copy the css from the AUT
+
+## Running multiple test case in a single file
+We can create the it() test runner but we have to use the .only attribute so we can run the 1 test case at a time
+e.g it.only ("Google", function()
+ {
+    cy.visit('https://www.google.com');
+ }
+ )
