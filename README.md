@@ -32,12 +32,12 @@ Head to VScode and paste the copied code as desired
 # Adding custom timeouts
 # Command level
 cy.get('.className, {timeouts:5000}').type('Jeloo{enter}')
-# Global level : Adding a timeout for the entire application
+## Global level : Adding a timeout for the entire application
 visit the cypress.json file and enter the following commands
 "defaultCommandTimeout": 5999 // we have chosen to set the timeout to 5999 against the default 40000 i.e 4secs 
 NB: timeout is simply the time taken for cypress to wait for a response from an action before throwing a duration assertion error
 
-# Searching and clicking on a specific text on the AUT
+## Searching and clicking on a specific text on the AUT
 cy.contains('textName') // this will focus on any where there is textName on the AUT, then we can append .click() to click such text.
 We could also use the cy.get() to access the text. Just that we would have to copy the css from the AUT
 
