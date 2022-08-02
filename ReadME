@@ -23,9 +23,10 @@ Click on any element on the web app, a cypress command is provided
 Then copy the command and paste inside ur .js file and run it
 
 
-## How to access elements under a Cypress test
+## How to access elements via its css class name under a Cypress test
 Run the cypress test
 Select the Open Selector Playground icon and then proceed to select any of the objects on the preview UI to get the selector code for copying
+Keep the open playground selector on cy.get() and click on the element you want to access
 Head to VScode and paste the copied code as desired
 
 ## Adding custom timeouts
@@ -38,3 +39,4 @@ NB: timeout is simply the time taken for cypress to wait for a response from an 
 
 ## Searching and clicking on a specific text on the AUT
 cy.contains('textName') // this will focus on any where there is textName on the AUT, then we can append .click() to click such text.
+We could also use the cy.get() to access the text. Just that we would have to copy the css from the AUT
