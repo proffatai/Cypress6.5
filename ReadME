@@ -24,3 +24,13 @@ Then copy the command and paste inside ur .js file and run it
 
 
 ## How to access elements under a Cypress test
+Run the cypress test
+Select the Open Selector Playground icon and then proceed to select any of the objects on the preview UI to get the selector code for copying
+Head to VScode and paste the copied code as desired
+
+## Adding custom timeouts
+### Command level
+cy.get('.className, {timeouts:5000}').type('Jeloo{enter}')
+### Global level : Adding a timeout for the entire application
+visit the cypress.json file and enter the following commands
+"defaultCommandTimeout": 5999 // we have chosen to set the timeout to 5999 against the default 40000 i.e 4secs 
