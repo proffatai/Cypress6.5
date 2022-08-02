@@ -1,7 +1,6 @@
-// Testing invalid username and password
-
  /// <reference types="cypress" /> 
 
+// Testing invalid username and password
  it ("Invalid Login", function()
  {
     cy.visit('https://opensource-demo.orangehrmlive.com/index.php/auth/login');
