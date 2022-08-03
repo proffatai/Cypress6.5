@@ -22,12 +22,17 @@ Locate and click on the Open selector playground icon. This highlights the whole
 Click on any element on the web app, a cypress command is provided
 Then copy the command and paste inside ur .js file and run it
 
+-[] All we need do is either to get the know the class name of the element or its id then we can use either cy.get('id') or cy.get('className') to locate the element. We can also use the text name via cy.contains('textWeAreLookingFor')
 
-# How to access elements via its css class name under a Cypress test
+## How to access elements via its css class name under a Cypress test
 Run the cypress test
 Select the Open Selector Playground icon and then proceed to select any of the objects on the preview UI to get the selector code for copying
 Keep the open playground selector on cy.get() and click on the element you want to access
 Head to VScode and paste the copied code as desired
+
+## Searching and clicking on a specific text on the AUT
+cy.contains('textName') // this will focus on any where there is textName on the AUT, then we can append .click() to click such text.
+We could also use the cy.get() to access the text. Just that we would have to copy the css from the AUT
 
 # Adding custom timeouts
 # Command level
@@ -37,10 +42,6 @@ visit the cypress.json file and enter the following commands
 "defaultCommandTimeout": 5999 // we have chosen to set the timeout to 5999 against the default 40000 i.e 4secs 
 NB: timeout is simply the time taken for cypress to wait for a response from an action before throwing a duration assertion error
 
-## Searching and clicking on a specific text on the AUT
-cy.contains('textName') // this will focus on any where there is textName on the AUT, then we can append .click() to click such text.
-We could also use the cy.get() to access the text. Just that we would have to copy the css from the AUT
-
 # Running multiple test case in a single file
 We can create the it() test runner but we have to use the .only attribute so we can run the 1 test case at a time
 e.g it.only ("Google", function()
@@ -48,3 +49,4 @@ e.g it.only ("Google", function()
     cy.visit('https://www.google.com');
  }
  )
+
