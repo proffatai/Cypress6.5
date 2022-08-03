@@ -50,3 +50,7 @@ e.g it.only ("Google", function()
  }
  )
 
+# Finding Descendant element
+Let's assume that we want to access a button `Quit` which is inside a list of buttons with class name `hmm`. Now assuming on cypress test, we are unable to directly access the button but we could only access its parent div which has a class name `hmm`. We can proceed to access the decendant or child element's property via the find('identity of the element i.e className or id'). We need to visit the actual website outside cypress in other to find out the id/className of the button (Assuming the button has an id=`yea`), then  we can proceed to access the child button on our cypress script via
+
+cy.get(`.hmm`).find('#yea')  -> firstly, we accessed the parent, which has the list of buttons whose class name is `hmm`. Then we proceeded to use the find command to search for a child or decendant with id =`yea`
