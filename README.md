@@ -1,13 +1,16 @@
-We create our tests inside the integration folder. You can delete the examples folder.
+## Description of folder structure
+Features folder holds default data that we wanna reuse throughout the test. Just like creating a variable and we only need the varName to acces the value
+
+Cypress.json holds global configuration
+
+Support folder is where we can create our custom commands or override some of the existing commands to fit our need
+
+Integration folder is where write our test scripts. We just need to create a js or ts file inside the integration folder
 
 If we add any external plugins, we can store them inside the plugins folder.
 
-Steps to commence tests on cypress
-
-1. Create a js file inside the integration folder
-2. ///<refrence types="cypress" />  #write this line of code on line 1 of the js file you just created
-
-Line 1 tells the IDE to allow autocompletion from the cypress library.
+## Other points
+ ///<refrence types="cypress" />  We write this line of code on line 1 of the js or ts file you just created. It allows vscode to give know that we are about to write cypress scripts and makes vscode provide us wuth the needed autocompletion in cypress.
 
 To write a test in cypress, we need a test runner called mocha which comes built-in with cypress. Example it()
 
