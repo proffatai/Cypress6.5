@@ -60,3 +60,19 @@ e.g it.only ("Google", function()
 Let's assume that we want to access a button `Quit` which is inside a list of buttons with class name `hmm`. Now assuming on cypress test, we are unable to directly access the button but we could only access its parent div which has a class name `hmm`. We can proceed to access the decendant or child element's property via the find('identity of the element i.e className or id'). We need to visit the actual website outside cypress in other to find out the id/className of the button (Assuming the button has an id=`yea`), then  we can proceed to access the child button on our cypress script via
 
 cy.get(`.hmm`).find('#yea')  -> firstly, we accessed the parent, which has the list of buttons whose class name is `hmm`. Then we proceeded to use the find command to search for a child or decendant with id =`yea`
+
+## Force clicking in cypress to close an opened modal
+
+Let's say we a modal is opened, and we want to click out so as to access another component, we need to force click. Firstly, we need to access that element that we want to locate using cy.get('selector').click({force:true}). Then we can proceed to access the component again, cy.get('selector').type('hello world')
+
+## Selecting an option from a <select> tag
+
+Say a select tag has 3 options namely: Man, Woman, Other with some class / id nameas shown below
+<select>
+   <option value="Hongkong CURA Healthcare Center">Hongkong CURA Healthcare Center</option>
+   <option value="Seoul CURA Healthcare Center">Seoul CURA Healthcare Center</option>
+   <option value="Tokyo CURA Healthcare Center">Tokyo CURA Healthcare Center</option>
+</select>
+This will appear as a dropdown on the UI, to be able to use cypress to select / get any of these, we can visit cypress select for more information or use the below commands, `cy.get('select').select('value of the option we want to select')`
+ 
+ e.g `cy.get('select').select('Tokyo CURA Healthcare Center')` This means we want to select the third option
