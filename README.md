@@ -7,7 +7,7 @@ Support folder is where we can create our custom commands or override some of th
 
 Integration folder is where write our test scripts. We just need to create a js or ts file inside the integration folder
 
-If we add any external plugins, we can store them inside the plugins folder.
+If we add any external plugins, we can store them inside the plugins folder. But in cypress 10, all external plugins are added to the cypress.config.js file, either in the e2e block or we create a new component block
 
 ## Other points
  ///<refrence types="cypress" />  We write this line of code on line 1 of the js or ts file you just created. It allows vscode to give know that we are about to write cypress scripts and makes vscode provide us wuth the needed autocompletion in cypress.
